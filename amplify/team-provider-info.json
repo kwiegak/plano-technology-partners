@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-planotechnology-dev-113249-authRole",
+      "UnauthRoleArn": "arn:aws:iam::178936723257:role/amplify-planotechnology-dev-113249-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::178936723257:role/amplify-planotechnology-dev-113249-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-planotechnology-dev-113249-deployment",
+      "UnauthRoleName": "amplify-planotechnology-dev-113249-unauthRole",
+      "StackName": "amplify-planotechnology-dev-113249",
+      "StackId": "arn:aws:cloudformation:us-east-1:178936723257:stack/amplify-planotechnology-dev-113249/d9e8b540-68d7-11f1-aee0-12dbef2039ab",
+      "AmplifyAppId": "d2aobb9awtjwmu"
+    }
+  }
+}
