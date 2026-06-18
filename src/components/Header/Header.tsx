@@ -20,12 +20,13 @@ const Header: FC<HeaderProps> = () => {
       className={styles.navbar}
     >
       <div className="container-fluid">
-        <Navbar.Brand
-          as={Link}
-          to="/"
-          className={styles["navbar-brand"]}
-          onClick={() => setExpanded(false)}
-        >
+        <Navbar.Brand as={Link} to="/">
+          <img
+            src="/icon-192x192.png"
+            alt="Plano Technology Partners"
+            height="48"
+            className="me-3"
+          />
           Plano Technology Partners
         </Navbar.Brand>
       </div>

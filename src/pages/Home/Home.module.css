@@ -1,0 +1,48 @@
+.hero {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #0B2F6B;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.buttons button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons button:first-child {
+    background: #0B2F6B;
+    color: white;
+}
+
+.buttons button:last-child {
+    background: #D62839;
+    color: white;
+}

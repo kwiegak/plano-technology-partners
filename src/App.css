@@ -1,7 +1,5 @@
 .App {
-  text-align: center;
   min-height: 100vh;
-  background-color: black;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  padding-top: 70px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef3f8 100%);
 }
