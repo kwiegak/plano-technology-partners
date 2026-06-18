@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "typeRoots" : ["node_modules/@types", "src/types"],
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "src"
+  , "src/components/home/HomePage.test.tsx"
+  , "src/components/home/HomePage.tsx"
+  , "globals.d.ts"
+  , "src/types/assets.d.ts"
+  , "**/*.ts"
+  , "**/*.tsx" ]
+}
+
