@@ -1,37 +1,38 @@
-import { FC, useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
-import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
-interface HeaderProps { }
-
-const Header: FC<HeaderProps> = () => {
-  const [expanded, setExpanded] = useState(false);
-  const navigate = useNavigate();
-
+function Header() {
   return (
-    <Navbar
-      bg="dark"
-      data-bs-theme="dark"
-      fixed="top"
-      expand="lg"
-      expanded={expanded}
-      className={styles.navbar}
-    >
-      <div className="container-fluid">
-        <Navbar.Brand as={Link} to="/">
+    <header className={styles.header}>
+      <div className={styles.container}>
+
+        <Link to="/" className={styles.brand}>
           <img
             src="/icon-192x192.png"
             alt="Plano Technology Partners"
-            height="48"
-            className="me-3"
+            className={styles.logo}
           />
-          Plano Technology Partners
-        </Navbar.Brand>
+
+          <div className={styles.textContainer}>
+            <span className={styles.company}>
+              Plano Technology Partners
+            </span>
+
+            <span className={styles.tagline}>
+              SOFTWARE • CLOUD • CONSULTING
+            </span>
+          </div>
+        </Link>
+
+        <nav className={styles.nav}>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+
       </div>
-    </Navbar>
+    </header>
   );
-};
+}
 
 export default Header;
