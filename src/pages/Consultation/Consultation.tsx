@@ -51,7 +51,7 @@ function Consultation() {
         }
 
         await fetch(
-            'http://54.224.215.184:8080/api/consultations',
+            'https://api.planotechnologypartners.com/api/consultations',
             {
                 method: 'POST',
                 headers: {
