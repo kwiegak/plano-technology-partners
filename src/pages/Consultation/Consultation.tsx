@@ -28,7 +28,7 @@ function Consultation() {
         });
     };
 
-    const handleSubmit = (
+    const handleSubmit = async (
         e: React.FormEvent<HTMLFormElement>
     ) => {
         e.preventDefault();
@@ -50,7 +50,16 @@ function Consultation() {
             return;
         }
 
-        console.log(request);
+        await fetch(
+            'http://54.224.215.184:8080/api/consultations',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(request)
+            }
+        );
     };
 
     return (
