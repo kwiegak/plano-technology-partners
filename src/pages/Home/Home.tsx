@@ -1,6 +1,8 @@
 import styles from './Home.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+    const navigate = useNavigate();
     return (
         <main>
             <section className={styles.hero}>
@@ -10,7 +12,7 @@ function Home() {
                 <h1> Technology Solutions for North Texas Businesses</h1>
                 <p> Custom Software Development, Cloud Solutions, Automation, and Technology Consulting.</p>
                 <div className={styles.buttons}>
-                    <button className={styles.primaryBtn}> Request a Consultation </button>
+                    <button className={styles.primaryBtn} onClick={() => navigate('/consultation')}> Request a Consultation </button>
                     <button className={styles.secondaryBtn}> Our Services </button>
                 </div>
             </section>
