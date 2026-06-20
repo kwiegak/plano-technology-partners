@@ -2,7 +2,6 @@
     background: white;
     border-bottom: 1px solid #e9ecef;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -11,9 +10,7 @@
 .container {
     max-width: 1400px;
     margin: 0 auto;
-
     padding: 0.5rem 2rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;

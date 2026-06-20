@@ -10,54 +10,39 @@
 
 .intro {
     max-width: 1000px;
-
     margin: 0 auto;
-
     padding: 5rem 2rem;
-
     text-align: center;
 }
 
 .intro h1 {
     color: #0B2F6B;
-
     font-size: 3.5rem;
     font-weight: 700;
-
     margin-bottom: 1.5rem;
 }
 
 .intro p {
     color: #555;
-
     font-size: 1.3rem;
-
     line-height: 1.8;
-
     margin-bottom: 2.5rem;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-
     gap: 1rem;
-
     flex-wrap: wrap;
 }
 
 .primaryBtn,
 .secondaryBtn {
     border: none;
-
     border-radius: 8px;
-
     padding: 15px 30px;
-
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         transform .25s ease,
         box-shadow .25s ease;
@@ -76,40 +61,28 @@
 .primaryBtn:hover,
 .secondaryBtn:hover {
     transform: translateY(-3px);
-
     box-shadow:
         0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .services {
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 2rem 2rem 6rem;
-
     display: grid;
-
     grid-template-columns:
         repeat(auto-fit, minmax(300px, 1fr));
-
     gap: 2rem;
 }
 
 .serviceCard {
     background: white;
-
     border-top: 4px solid #D62839;
-
     border-radius: 12px;
-
     padding: 2rem;
-
     text-align: center;
-
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.08);
-
     transition:
         transform .3s ease,
         box-shadow .3s ease;
@@ -117,14 +90,12 @@
 
 .serviceCard:hover {
     transform: translateY(-8px);
-
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .serviceCard h3 {
     color: #0B2F6B;
-
     margin-bottom: 1rem;
 }
 
@@ -135,29 +106,21 @@
 
 .about {
     background: #f8f9fb;
-
     padding: 6rem 2rem;
-
     text-align: center;
 }
 
 .about h2 {
     color: #0B2F6B;
-
     font-size: 2.5rem;
-
     margin-bottom: 1.5rem;
 }
 
 .about p {
     max-width: 900px;
-
     margin: 0 auto;
-
     color: #555;
-
     line-height: 1.8;
-
     font-size: 1.1rem;
 }
 
