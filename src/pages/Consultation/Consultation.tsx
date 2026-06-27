@@ -107,7 +107,7 @@ function Consultation() {
                 success: true,
                 title: 'Thank You, We\'ve Received Your Request.',
                 message:
-                    "Someone will contact to you soon."
+                    "Your consultation request has been received successfully. A member of the Plano Technology Partners team will review your request and respond within one business day."
             });
 
             setModalOpen(true);
