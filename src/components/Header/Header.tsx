@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import { Link } from "react-router-dom";
+import styles from "./Header.module.css";
 
-function Header() {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
 
         <Link to="/" className={styles.brand}>
+
           <img
             src="/icon-192x192.png"
             alt="Plano Technology Partners"
@@ -22,17 +23,17 @@ function Header() {
               SOFTWARE • CLOUD • CONSULTING
             </span>
           </div>
+
         </Link>
 
         <nav className={styles.nav}>
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
         </nav>
 
       </div>
     </header>
   );
 }
-
-export default Header;
