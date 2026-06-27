@@ -1,38 +1,55 @@
-import styles from './Home.module.css';
-import { useNavigate } from 'react-router-dom';
+import styles from "./Home.module.css";
+import hero from "../../assets/images/home-banner.png";
+import { Link } from "react-router-dom";
 
-function Home() {
-    const navigate = useNavigate();
+export default function Home() {
     return (
-        <main>
-            <section className={styles.hero}>
-                <img src="/images/home-banner.png" alt="Plano Technology Partners" className={styles.heroImage}/>
-            </section>
-            <section className={styles.intro}>
-                <h1> Technology Solutions for North Texas Businesses</h1>
-                <p> Custom Software Development, Cloud Solutions, Automation, and Technology Consulting.</p>
-                <div className={styles.buttons}>
-                    <button className={styles.primaryBtn} onClick={() => navigate('/consultation')}> Request a Consultation </button>
-                    <button className={styles.secondaryBtn}> Our Services </button>
+        <>
+            <section
+                className={styles.hero}
+                style={{ backgroundImage: `url(${hero})` }}
+            >
+                <div className={styles.heroOverlay}>
+                    <div className={styles.heroContent}>
+
+                        <h1>Technology Solutions</h1>
+
+                        <h2>Built for Plano Businesses</h2>
+
+                        <p>
+                            Custom software development, cloud engineering,
+                            AI integration, and technology consulting that
+                            helps your business grow.
+                        </p>
+
+                        <Link
+                            to="/consultation"
+                            className={styles.heroButton}
+                        >
+                            Schedule Your Free Consultation
+                        </Link>
+
+                    </div>
                 </div>
             </section>
-
             <section className={styles.services}>
+
                 <div className={styles.serviceCard}>
                     <h3>Custom Software Development</h3>
                     <p>
-                        Modern web applications, APIs,
-                        integrations, and enterprise systems
-                        tailored to your business.
+                        Modern web applications, APIs, integrations,
+                        and enterprise systems tailored to your business.
                     </p>
                 </div>
+
                 <div className={styles.serviceCard}>
                     <h3>Cloud Solutions</h3>
                     <p>
-                        AWS architecture, migrations,
-                        automation, and scalable infrastructure.
+                        AWS architecture, migrations, automation,
+                        and scalable infrastructure.
                     </p>
                 </div>
+
                 <div className={styles.serviceCard}>
                     <h3>Technology Consulting</h3>
                     <p>
@@ -41,21 +58,22 @@ function Home() {
                         and digital transformation.
                     </p>
                 </div>
-            </section>
 
-            <section className={styles.about}>
-                <h2> Local Expertise. Enterprise Experience.</h2>
-                <p>
-                    Plano Technology Partners helps businesses leverage
-                    modern technology through custom software development,
-                    cloud architecture, automation, and consulting services.
-
-                    We combine enterprise-level engineering experience with
-                    personalized local support.
-                </p>
             </section>
-        </main>
+            <section className={styles.homeIntro}>
+                <div className={styles.container}>
+
+                    <h2>Plano Technology Partners</h2>
+
+                    <p>
+                        We partner with businesses throughout Plano and
+                        North Texas to deliver enterprise-grade technology
+                        solutions that improve productivity, reduce costs,
+                        and prepare organizations for long-term growth.
+                    </p>
+
+                </div>
+            </section>
+        </>
     );
 }
-
-export default Home;

@@ -1,150 +1,209 @@
 .hero {
+    position: relative;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heroOverlay {
     width: 100%;
-    background: #f8f9fb;
-}
-
-.heroImage {
-    width: 100%;
-    display: block;
-}
-
-.intro {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.intro h1 {
-    color: #0B2F6B;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-.intro p {
-    color: #555;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-}
-
-.buttons {
+    height: 100%;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(rgba(8, 30, 60, 0.72),
+            rgba(8, 30, 60, 0.45));
 }
 
-.primaryBtn,
-.secondaryBtn {
-    border: none;
-    border-radius: 8px;
-    padding: 15px 30px;
+.heroContent {
+    max-width: 760px;
+    padding: 0 30px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.9s ease;
+}
+
+.heroContent h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.5px;
+}
+
+.heroContent h2 {
+    margin-top: 12px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #7fd6ff;
+}
+
+.heroContent p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .95);
+}
+
+.heroButton {
+    display: inline-block;
+    padding: 18px 42px;
+    background: #0098db;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    border-radius: 8px;
+    transition: all .25s ease;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
 }
 
-.primaryBtn {
-    background: #0B2F6B;
-    color: white;
-}
-
-.secondaryBtn {
-    background: #D62839;
-    color: white;
-}
-
-.primaryBtn:hover,
-.secondaryBtn:hover {
+.heroButton:hover {
+    background: #0078b3;
     transform: translateY(-3px);
-    box-shadow:
-        0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .35);
 }
+
+/* ===============================
+   Services
+================================== */
 
 .services {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 2rem 6rem;
+    margin: -85px auto 80px;
+    padding: 0 30px;
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 100;
 }
 
 .serviceCard {
     background: white;
-    border-top: 4px solid #D62839;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+    transition: all .25s ease;
 }
 
 .serviceCard:hover {
     transform: translateY(-8px);
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, .18);
 }
 
 .serviceCard h3 {
-    color: #0B2F6B;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #0b2f6b;
+    font-size: 1.45rem;
 }
 
 .serviceCard p {
+    margin: 0;
     color: #555;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-.about {
-    background: #f8f9fb;
-    padding: 6rem 2rem;
+/* ===============================
+   Intro
+================================== */
+
+.homeIntro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 30px 90px;
+}
+
+.container {
     text-align: center;
 }
 
-.about h2 {
-    color: #0B2F6B;
+.homeIntro h2 {
+    margin-bottom: 20px;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    color: #0b2f6b;
 }
 
-.about p {
-    max-width: 900px;
-    margin: 0 auto;
+.homeIntro p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.15rem;
+    line-height: 1.9;
     color: #555;
-    line-height: 1.8;
-    font-size: 1.1rem;
+}
+
+/* ===============================
+   Responsive
+================================== */
+
+@media (max-width: 992px) {
+
+    .services {
+        grid-template-columns: 1fr;
+        margin-top: -40px;
+    }
+
+    .hero {
+        height: 620px;
+    }
+
+    .heroContent h1 {
+        font-size: 3rem;
+    }
+
+    .heroContent h2 {
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 768px) {
 
-    .intro h1 {
-        font-size: 2.3rem;
+    .hero {
+        height: 560px;
     }
 
-    .intro p {
-        font-size: 1.1rem;
+    .heroContent h1 {
+        font-size: 2.4rem;
     }
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
+    .heroContent h2 {
+        font-size: 1.35rem;
     }
 
-    .primaryBtn,
-    .secondaryBtn {
-        width: 260px;
+    .heroContent p {
+        font-size: 1rem;
     }
 
-    .about h2 {
+    .heroButton {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .homeIntro h2 {
         font-size: 2rem;
+    }
+}
+
+/* ===============================
+   Animation
+================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
