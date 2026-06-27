@@ -19,7 +19,7 @@ export default function Home() {
                         <h1>
                             Technology Solutions That Help
                             <br />
-                            Plano Businesses Grow
+                            Businesses Grow
                         </h1>
 
                         <h2>

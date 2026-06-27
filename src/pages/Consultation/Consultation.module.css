@@ -7,7 +7,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .formGroup {
@@ -16,20 +16,235 @@
     gap: 8px;
 }
 
-input,
-textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.formGroup label {
+    font-weight: 600;
+    color: #1f2937;
 }
 
+.formGroup span {
+    color: #dc2626;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.invalid {
+    border-color: #dc2626;
+}
+
+.invalid:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.fieldError {
+    color: #dc2626;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   Submit Button
+========================================================== */
+
 button {
-    width: fit-content;
-    padding: 12px 24px;
+    align-self: flex-start;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #0b4ea2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background: #083d82;
+    transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #cbd5e1;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================================
+   Modal
+========================================================== */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+
+    animation: fadeIn 0.2s ease;
+}
+
+.modalCard {
+    width: min(92%, 520px);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+    border-left: 6px solid;
+
+    padding: 32px;
+
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.08),
+        0 24px 48px rgba(15, 23, 42, 0.12);
+
+    animation: modalEnter 0.22s cubic-bezier(.2, .9, .2, 1);
+}
+
+.success {
+    border-left-color: #16a34a;
 }
 
 .error {
-    color: red;
-    margin-bottom: 20px;
+    border-left-color: #dc2626;
+}
+
+.modalCard h2 {
+    margin: 0 0 14px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.modalCard p {
+    margin: 0;
+
+    color: #4b5563;
+
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   Modal Actions
+========================================================== */
+
+.modalActions {
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalActions button {
+    align-self: auto;
+
+    min-width: 100px;
+
+    padding: 12px 22px;
+
+    background: #0b4ea2;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.modalActions button:hover {
+    background: #083d82;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   Animations
+========================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 16px;
+    }
+
+    .modalCard {
+        padding: 24px;
+    }
+
+    .modalCard h2 {
+        font-size: 1.3rem;
+    }
+
+    .modalActions {
+        justify-content: stretch;
+    }
+
+    .modalActions button {
+        width: 100%;
+    }
 }
